@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="header">
+    <form name="myForm"onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="name"><br><br>
+        Number: <input type="number" name="number" ><br><br>
+        Email: </Email:br><input type="email" name="email"><br><br>
+        <label for="Enquiries">Enquries:</label><br> <textarea rows="20"name="comment" cols="50"  form="usrform">
+            </textarea><br>
+        <input type="submit" value="Submit">
+      </form> 
+<script>
+    function validateForm() {
+  
+  if (document.myForm.number.value == "") {
+    alert("Number area must be filled out");
+    document.myForm.number.style.background = "red";
+    document.myForm.number.focus() ;
+    return false;
+  }
+
+  
+  if (document.myForm.name.value == "") {
+    alert("Name area must be filled out");
+    document.myForm.name.style.background = "red";
+    document.myForm.name.focus() ;
+    return false;
+  }
+
+  if (document.myForm.email.value == "") {
+    alert("Email area must be filled out");
+    document.myForm.email.style.background = "red";
+    document.myForm.email.focus() ;
+    return false;
+  }
+ 
+ 
+ 
+}
+</script>
+</body>
+
+
+</html>
